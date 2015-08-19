@@ -1,0 +1,15 @@
+<h3>Task list!</h3>
+<ul>
+  #foreach ($task in @tasks)
+   <li>$task.getDescription()</li>
+   #end
+</ul>
+<hr/>
+<p>Add a new Task:</p>
+
+<form action="/tasks" method="post">
+  <label for="description">Task Directory</label>
+  <input id="description", name="description" type="test">
+
+  <button type="submit" class="btn btn-default">Add task</button>
+</form>
