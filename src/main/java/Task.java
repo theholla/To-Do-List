@@ -1,5 +1,3 @@
-
-
 public class Task {
   //initializing the member variable into the class, saved into the object itseld
   String mDescription;
