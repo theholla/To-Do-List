@@ -18,8 +18,8 @@ public class App {
 
     post("/tasks", (request, response) -> {
     HashMap<String, Object> model = new HashMap<String, Object>();
-    ArrayList<Task> tasks = request.session().attribute("tasks");     //first time, list is null
 
+    ArrayList<Task> tasks = request.session().attribute("tasks");     //first time, list is null
     if (tasks == null) {
       tasks = new ArrayList<Task>();
       request.session().attribute("tasks", tasks);
@@ -28,7 +28,6 @@ public class App {
     //put new task into new array list
     String description = request.queryParams("description");
     Task newTask = new Task(description);
-
     tasks.add(newTask);
 
     model.put("template", "templates/success.vtl");
